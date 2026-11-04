@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SAP 2020 – Das Geschäftsjahr im Überblick</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--bg:#f5f7fa;--card:#fff;--tx:#12202f;--mu:#5b6b7c;--ac:#0070f2;--ac2:#0a4d9c;--bd:#e3e8ee;--warn:#b45309;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1621;--card:#16212f;--tx:#e8eef5;--mu:#9aa9ba;--ac:#4aa3ff;--ac2:#8cc4ff;--bd:#263548;--warn:#f0b254}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--ac)}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--card);border-bottom:1px solid var(--bd);z-index:5}
+nav{max-width:1100px;margin:auto;display:flex;gap:18px;padding:12px 20px;overflow-x:auto;white-space:nowrap;font-size:14px}
+nav b{color:var(--ac);margin-right:auto}
+nav a{text-decoration:none;color:var(--mu)}nav a:hover{color:var(--ac)}
+main{max-width:1100px;margin:auto;padding:0 20px 60px}
+section{padding:48px 0 0}
+h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin:48px 0 16px}
+h2{font-size:1.7rem;margin:0 0 6px}
+p.lead{color:var(--mu);max-width:700px;font-size:1.1rem}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:24px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,112,242,.12)}
+.k{font-size:.85rem;color:var(--mu)}
+.v{font-size:2rem;font-weight:700;color:var(--ac2);margin:4px 0}
+.src{font-size:.78rem;color:var(--mu);margin-top:8px}
+.tag{display:inline-block;font-size:.72rem;padding:1px 8px;border-radius:99px;background:rgba(0,112,242,.12);color:var(--ac2)}
+.nv{color:var(--warn);font-weight:600}
+abbr{text-decoration:underline dotted;cursor:help}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--bd)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto}
+.chart{position:relative;height:280px}
+.tl{border-left:3px solid var(--ac);margin:24px 0 0 8px;padding-left:22px}
+.tl div{margin-bottom:22px;position:relative}
+.tl div:before{content:"";position:absolute;left:-30px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--ac)}
+.tl time{font-weight:700;color:var(--ac2)}
+footer{max-width:1100px;margin:auto;padding:0 20px 40px;color:var(--mu);font-size:.85rem}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><nav aria-label="Hauptnavigation"><b>SAP 2020</b><a href="#kennzahlen">Kennzahlen</a><a href="#unternehmen">Unternehmen</a><a href="#finanzen">Finanzen</a><a href="#diagramme">Diagramme</a><a href="#timeline">Ereignisse</a><a href="#quellen">Quellen &amp; Daten</a></nav></header>
+<main>
+<h1>SAP 2020 – Das Geschäftsjahr im Überblick</h1>
+<p class="lead">SAP SE ist ein Softwarekonzern mit Sitz in Walldorf. Seine Programme steuern bei Unternehmen weltweit Abläufe wie Einkauf, Buchhaltung und Personal. Im Jahr 2020 sank der Umsatz leicht, während der Cloud-Umsatz weiter wuchs.</p>
+
+<section id="kennzahlen" aria-labelledby="h-k"><h2 id="h-k">Vier Kennzahlen</h2>
+<div class="grid" id="kpis"></div></section>
+
+<section id="unternehmen"><h2>Unternehmen</h2>
+<div class="grid">
+<div class="card"><h3>Was ist SAP?</h3><p>Europas größter Softwarehersteller (<span class="tag">Quelle: dpa/moneycab</span>), bekannt für Unternehmenssoftware wie S/4HANA, Ariba, SuccessFactors, Concur und Qualtrics.</p></div>
+<div class="card"><h3>Hauptsitz</h3><p>Walldorf (Baden-Württemberg), laut SAP-Mitteilung vom April 2020.</p></div>
+<div class="card"><h3>Führung 2020</h3><p>Seit Oktober 2019 führten Christian Klein und Jennifer Morgan SAP als Co-CEOs. Seit 1. Mai 2020 leitet Klein SAP allein. Aufsichtsratsvorsitzender: Hasso Plattner.</p></div>
+</div></section>
+
+<section id="finanzen"><h2>Finanzkennzahlen 2020</h2>
+<p class="lead">Mio. € · <abbr title="IFRS: international gültige Rechnungslegung. Umfasst z. B. auch Restrukturierungs- und aktienbasierte Vergütungsaufwendungen.">IFRS</abbr> und <abbr title="Non-IFRS: von SAP um Sondereffekte bereinigte Kennzahl, kein offizieller Rechnungslegungsstandard.">Non-IFRS</abbr> getrennt ausgewiesen.</p>
+<div class="card scroll"><table id="fin"><thead><tr><th>Kennzahl</th><th>Standard</th><th class="n">2020</th><th class="n">2019</th></tr></thead><tbody></tbody></table>
+<p class="src" id="fin-src"></p></div></section>
+
+<section id="diagramme"><h2>Diagramme</h2>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))" id="charts"></div></section>
+
+<section id="timeline"><h2>Wichtige Ereignisse 2020</h2>
+<div class="tl" id="tl"></div></section>
+
+<section id="quellen"><h2>Quellen &amp; Daten</h2>
+<div class="card"><ul id="sources"></ul>
+<p class="src"><b>Hinweis zur Prüfung:</b> Die Zahlen für 2020 stammen aus der Kennzahlentabelle des SAP-Integrierten Berichts 2020 (Kopie auf Drittserver) und wurden mit der SAP-Mitteilung vom Januar 2021 abgeglichen (Betriebsergebnis IFRS 6,62 Mrd. €, Non-IFRS 8,28 Mrd. €). Werte für 2018/2019 stammen aus SEC-Einreichungen von SAP. Vor Veröffentlichung bitte die Originalberichte auf sap.com/investors gegenprüfen.</p></div></section>
+</main>
+<footer>Unabhängige Informationsseite, keine Anlageberatung. Daten zentral in <code>DATA</code> im Skript.</footer>
+
+<script>
+// ===== Zentrale Datendatei =====
+const S={
+ ir20:{t:"SAP Integrierter Bericht 2020 – Kennzahlen (Kopie)",u:"https://boersengefluester.de/wp-content/uploads/assets/annuals/0000/846900/716460/716460_2020.pdf"},
+ pr21:{t:"SAP-Mitteilung: vorläufige Ergebnisse Q4/Gesamtjahr 2020",u:"https://news.sap.com/germany/2021/01/sap-veroeffentlicht-starke-vorlaeufige-ergebnisse-fuer-das-vierte-quartal-und-gesamtjahr-2020/"},
+ f19:{t:"SAP Form 20-F 2019 (SEC) – Umsatz & Cloud 2018/2019",u:"https://www.sec.gov/Archives/edgar/data/1000184/000110465920025681/sap-20191231x20f6ea59a.htm"},
+ k19:{t:"SAP Integrierter Bericht 2019 – Key Facts (SEC 6-K) – Mitarbeiter",u:"https://www.sec.gov/Archives/edgar/data/1000184/000110465920029454/a19-18843_4ex99d1.htm"},
+ pr20q1:{t:"SAP-Mitteilung April 2020: vorläufige Q1-Ergebnisse",u:"https://news.sap.com/germany/2020/04/sap-veroeffentlicht-vorlaeufige-ergebnisse-fuer-das-erste-quartal-und-aktualisiert-ausblick-fuer-2020/"},
+ ceo:{t:"SAP-Mitteilung April 2020: Klein alleiniger CEO",u:"https://news.sap.com/germany/2020/04/christian-klein-sap-ceo-jennifer-morgan-verlaesst-unternehmen/"},
+ ni:{t:"Netzwoche: Jahreszahlen 2020 (Konzernergebnis, Sekundärquelle)",u:"https://www.netzwoche.ch/news/2021-01-29/sap-setzt-milliarden-euro-um-mit-cloud-und-qualtrics-boersengang"}
+};
+const DATA={
+ years:["2018","2019","2020"],
+ revenue:[24708,27553,27338],        // IFRS, Mio. €
+ cloud:[4993,6933,8080],             // IFRS, Mio. €
+ employees:[96498,100330,102430],    // FTE, 31.12.
+ rev2020:{cloud:8080,license:3642,support:11506,cloudSoftware:23228,total:27338},
+ fin:[
+  ["Gesamtumsatz","IFRS",27338,27553,"ir20"],
+  ["Cloud-Umsatz","IFRS",8080,6933,"ir20"],
+  ["Cloud-Umsatz","Non-IFRS",8085,7013,"ir20"],
+  ["Softwarelizenzumsatz","IFRS",3642,4533,"ir20"],
+  ["Software-Support-Umsatz","IFRS",11506,11547,"ir20"],
+  ["Betriebsergebnis","IFRS",6623,4473,"ir20"],
+  ["Betriebsergebnis","Non-IFRS",8287,8208,"ir20"],
+  ["Konzernergebnis (nach Steuern)","IFRS","5280",null,"ni"],
+  ["Ergebnis je Aktie, unverwässert","Non-IFRS","5,41 €","5,11 €","ir20"],
+  ["Mitarbeiter (FTE, 31.12.)","–",102430,100330,"ir20"]
+ ]
+};
+const nf=n=>n==null?'<span class="nv">Nicht verifiziert</span>':(typeof n==="number"?n.toLocaleString("de-DE"):n);
+const link=k=>k?`<a href="${S[k].u}" target="_blank" rel="noopener">Quelle</a>`:"";
+// KPIs
+const kp=[
+ ["Gesamtumsatz 2020","27,3 Mrd. €","IFRS · −1 % ggü. 2019","ir20"],
+ ["Betriebsergebnis 2020","6,6 Mrd. €","IFRS · Non-IFRS: 8,3 Mrd. €","ir20"],
+ ["Mitarbeiter Ende 2020","102.430","Vollzeitäquivalente (FTE)","ir20"],
+ ["Cloud-Umsatz 2020","8,1 Mrd. €","IFRS · +17 % ggü. 2019","ir20"]];
+document.getElementById("kpis").innerHTML=kp.map(k=>`<div class="card"><div class="k">${k[0]}</div><div class="v">${k[1]}</div><div class="k">${k[2]}</div><div class="src">${link(k[3])}</div></div>`).join("");
+// Tabelle
+document.querySelector("#fin tbody").innerHTML=DATA.fin.map(r=>`<tr><td>${r[0]}</td><td><span class="tag">${r[1]}</span></td><td class="n">${nf(r[2])}</td><td class="n">${nf(r[3])}</td></tr>`).join("");
+document.getElementById("fin-src").innerHTML="Quellen: "+link("ir20")+" (Kennzahlentabelle), "+link("ni")+" (Konzernergebnis, Sekundärquelle: „5,28 Mrd. €“, Wert gerundet).";
+// Diagramme
+const other=DATA.rev2020.total-DATA.rev2020.cloudSoftware;
+const defs=[
+ {id:"c1",t:"Gesamtumsatz 2018–2020",u:"Mio. €, IFRS",type:"bar",labels:DATA.years,data:DATA.revenue,src:["f19","ir20"],note:"Gesamtumsatz = alle Erlöse des Konzerns."},
+ {id:"c2",t:"Umsatz nach Kategorien 2020",u:"Mio. €, IFRS",type:"doughnut",labels:["Cloud","Softwarelizenzen","Software-Support","Dienstleistungen*"],data:[DATA.rev2020.cloud,DATA.rev2020.license,DATA.rev2020.support,other],src:["ir20"],note:"*Berechnet: Gesamtumsatz minus Cloud und Software (23.228). Entspricht dem übrigen Umsatz, v. a. Services."},
+ {id:"c3",t:"Cloud-Umsatz 2018–2020",u:"Mio. €, IFRS",type:"line",labels:DATA.years,data:DATA.cloud,src:["f19","ir20"],note:"Cloud-Umsatz = Erlöse aus von SAP gehosteter Software, die Kunden während der Vertragslaufzeit nutzen."},
+ {id:"c4",t:"Mitarbeiter 2018–2020",u:"Vollzeitäquivalente zum 31.12.",type:"bar",labels:DATA.years,data:DATA.employees,src:["k19","ir20"],note:"FTE = auf Vollzeit umgerechnete Stellen."}
+];
+const cs=document.getElementById("charts");
+cs.innerHTML=defs.map(d=>`<div class="card"><h3>${d.t}</h3><div class="k">${d.u}</div><div class="chart"><canvas id="${d.id}" role="img" aria-label="${d.t}: ${d.labels.map((l,i)=>l+" "+d.data[i].toLocaleString("de-DE")).join(", ")}"></canvas></div><p class="src">${d.note}<br>Quelle: ${d.src.map(link).join(", ")}</p></div>`).join("");
+const pal=["#0070f2","#0a4d9c","#6fb1ff","#a9c9ee"];
+function draw(){
+ const dark=matchMedia("(prefers-color-scheme: dark)").matches,tx=dark?"#9aa9ba":"#5b6b7c";
+ defs.forEach(d=>{
+  const old=Chart.getChart(d.id);if(old)old.destroy();
+  const pie=d.type==="doughnut";
+  new Chart(document.getElementById(d.id),{type:d.type,data:{labels:d.labels,datasets:[{data:d.data,backgroundColor:pie?pal:"#0070f2",borderColor:"#0070f2",borderRadius:6,tension:.3,fill:false,pointRadius:5}]},
+   options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:pie,position:"bottom",labels:{color:tx}},tooltip:{callbacks:{label:c=>" "+(typeof c.parsed==="number"?c.parsed:c.parsed.y).toLocaleString("de-DE")}}},
+   scales:pie?{}:{x:{ticks:{color:tx},grid:{display:false}},y:{beginAtZero:true,ticks:{color:tx,callback:v=>v.toLocaleString("de-DE")}}}}});
+ });
+}
+draw();matchMedia("(prefers-color-scheme: dark)").addEventListener("change",draw);
+// Timeline
+const ev=[
+ ["Okt. 2019 (Vorgeschichte)","Christian Klein und Jennifer Morgan übernehmen als Co-CEOs die Nachfolge von Bill McDermott.","ceo"],
+ ["April 2020","Vorläufige Q1-Zahlen: Wegen der Corona-Pandemie werden viele Abschlüsse verschoben. SAP stellt weniger ein und senkt kurzfristige Ausgaben; der Ausblick wird angepasst.","pr20q1"],
+ ["20./21. April 2020","SAP gibt bekannt, dass Jennifer Morgan zum 30.04. geht. Christian Klein führt SAP allein.","ceo"],
+];
+document.getElementById("tl").innerHTML=ev.map(e=>`<div><time>${e[0]}</time><p>${e[1]??'<span class="nv">Nicht verifiziert</span> – noch nicht aus Primärquellen belegt.'} ${link(e[2])}</p></div>`).join("");
+document.getElementById("sources").innerHTML=Object.values(S).map(s=>`<li><a href="${s.u}" target="_blank" rel="noopener">${s.t}</a></li>`).join("");
+</script>
+</body>
+</html>

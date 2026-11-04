@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daniel – Bewerbung um ein Schülerpraktikum bei SAP</title>
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7fa;--surface:#ffffff;--ink:#12202f;--muted:#51627a;--line:#d6deea;
+  --blue:#0a5fc2;--blue-soft:#e3eefb;--sun:#ffc933;--on-blue:#ffffff;
+  --head:'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;
+  --body:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0d1622;--surface:#152233;--ink:#e8eef7;--muted:#9fb0c6;--line:#27384d;--blue:#6aa8ff;--blue-soft:#1b2f4a;--on-blue:#0d1622}
+}
+:root[data-theme="dark"]{--bg:#0d1622;--surface:#152233;--ink:#e8eef7;--muted:#9fb0c6;--line:#27384d;--blue:#6aa8ff;--blue-soft:#1b2f4a;--on-blue:#0d1622}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.1rem/1.65 var(--body)}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.4rem}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:1.2rem;align-items:center;overflow-x:auto;padding-top:.7rem;padding-bottom:.7rem;white-space:nowrap}
+nav b{font-family:var(--head);font-weight:800;margin-right:auto}
+nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.98rem}
+nav a:hover{color:var(--blue)}
+nav button{font:inherit;font-size:.9rem;background:none;border:1px solid var(--line);color:var(--ink);border-radius:2rem;padding:.2rem .8rem;cursor:pointer}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0}
+.hero{padding:4.5rem 0 3.5rem}
+.hero h1{font-size:clamp(2.6rem,8vw,5.4rem);font-weight:800;letter-spacing:-.02em;max-width:14ch}
+.hero h1 span{display:block;color:var(--blue)}
+.hero p.lead{font-size:1.3rem;max-width:36rem;margin:1.6rem 0 2rem;color:var(--muted)}
+.btn{display:inline-block;background:var(--blue);color:var(--on-blue);font-weight:600;text-decoration:none;padding:.8rem 1.5rem;border-radius:.6rem}
+.btn.alt{background:none;color:var(--ink);border:2px solid var(--line);margin-left:.5rem}
+.facts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2.4rem;padding:0;list-style:none}
+.facts li{background:var(--surface);border:1px solid var(--line);border-radius:2rem;padding:.3rem 1rem;font-size:.98rem}
+.facts li:first-child{background:var(--sun);border-color:var(--sun);color:#12202f;font-weight:600}
+section{padding:3.2rem 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:700;margin-bottom:1.2rem;letter-spacing:-.01em}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem}
+p{margin:0 0 1rem;max-width:40rem}
+.chips{display:flex;flex-wrap:wrap;gap:.7rem;margin:0;padding:0;list-style:none}
+.chips li{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:.4rem;padding:.55rem .9rem}
+.chips small{display:block;color:var(--muted);font-size:.85rem}
+.note{color:var(--muted);font-size:1rem;margin-top:1.2rem}
+.timeline{border-left:3px solid var(--blue);margin:0;padding:0 0 0 1.5rem;list-style:none}
+.timeline li{position:relative;padding-bottom:1.6rem}
+.timeline li::before{content:"";position:absolute;left:-2.05rem;top:.45rem;width:.9rem;height:.9rem;border-radius:50%;background:var(--sun);border:3px solid var(--blue)}
+.timeline h3{font-size:1.4rem}
+.timeline li.next h3{color:var(--blue)}
+.timeline li.next::before{background:var(--blue);border-color:var(--sun)}
+.strengths{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem}
+.strengths div{background:var(--surface);border:1px solid var(--line);border-radius:.8rem;padding:1.2rem}
+.strengths h3{font-size:1.3rem;margin-bottom:.4rem;color:var(--blue)}
+.strengths p{margin:0;font-size:1.02rem}
+details{background:var(--surface);border:1px solid var(--line);border-radius:.8rem;margin-bottom:.8rem;max-width:44rem}
+summary{cursor:pointer;padding:1rem 1.2rem;font:700 1.2rem var(--head);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--blue);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding:0 1.2rem;margin:0 0 1.1rem}
+.contact{background:var(--blue-soft);border-radius:1rem;padding:1.6rem;max-width:44rem}
+.contact dl{margin:1rem 0 0;display:grid;grid-template-columns:7rem 1fr;gap:.4rem 1rem}
+.contact dt{color:var(--muted)}.contact dd{margin:0;font-weight:600}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+@media (max-width:700px){.cols{grid-template-columns:1fr}.btn.alt{margin:.6rem 0 0}.hero{padding-top:3rem}}
+@media (prefers-reduced-motion:no-preference){.hero h1{animation:in .8s ease-out both}@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <b>Daniel</b>
+  <a href="#ueber-mich">Über mich</a><a href="#kenntnisse">Kenntnisse</a><a href="#praktika">Praktika</a><a href="#staerken">Stärken</a><a href="#sap">Warum SAP</a><a href="#kontakt">Kontakt</a>
+  <button id="theme" type="button" aria-label="Hell oder dunkel umschalten">Hell/Dunkel</button>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Hallo, ich bin Daniel.<span>Ich möchte wissen, wie Software entsteht.</span></h1>
+  <p class="lead">Ich bin 14, gehe in die 9. Klasse und bewerbe mich um ein Schülerpraktikum bei SAP in Walldorf, in den Osterferien 2027.</p>
+  <a class="btn" href="#kontakt">Kontakt</a><a class="btn alt" href="#sap">Warum SAP?</a>
+  <ul class="facts">
+    <li>Oster-Schülerpraktikum 2027</li><li>SAP Walldorf</li><li>9. Klasse</li><li>Interesse: KI &amp; Software</li>
+  </ul>
+</div></header>
+
+<main>
+<section id="ueber-mich"><div class="wrap cols">
+  <div>
+    <h2>Über mich</h2>
+    <p>Computer und neue Technologien begeistern mich. Ich probiere gern neue digitale Anwendungen aus und will verstehen, wie sie funktionieren.</p>
+    <p>Am meisten interessieren mich künstliche Intelligenz und Softwareentwicklung. Mit einem Praktikum bei SAP möchte ich einen Blick in die IT-Branche werfen.</p>
+  </div>
+  <div>
+    <h2>Das interessiert mich</h2>
+    <ul class="chips">
+      <li>Künstliche Intelligenz</li><li>Computer &amp; moderne Technik</li><li>Softwareentwicklung</li><li>Neue digitale Anwendungen</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="kenntnisse"><div class="wrap">
+  <h2>Was ich schon kann</h2>
+  <ul class="chips">
+    <li>Windows<small>Kenntnisse im Umgang</small></li>
+    <li>Microsoft Word<small>Kenntnisse</small></li>
+    <li>Microsoft Teams<small>Kenntnisse</small></li>
+    <li>Adobe After Effects<small>Kenntnisse</small></li>
+    <li>KI-Anwendungen<small>Ich probiere sie aus</small></li>
+    <li>Onshape<small>Grundkenntnisse</small></li>
+  </ul>
+  <p class="note">Ich bin kein Profi, das ist erst der Anfang. Dafür lerne ich gern dazu und arbeite mich selbstständig in neue Programme ein.</p>
+</div></section>
+
+<section id="praktika"><div class="wrap">
+  <h2>Meine Praktika</h2>
+  <ol class="timeline">
+    <li><h3>ABB</h3><p>Mein Praktikum dort hat mir einen ersten Einblick in die Arbeitswelt gegeben.</p></li>
+    <li><h3>Heidelberger Druckmaschinen</h3><p>Hier habe ich ein zweites Unternehmen kennengelernt und gemerkt, wie unterschiedlich der Arbeitsalltag sein kann.</p></li>
+    <li class="next"><h3>SAP – der nächste Schritt</h3><p>Nach zwei Unternehmen möchte ich jetzt erleben, wie es bei einem Softwareunternehmen zugeht.</p></li>
+  </ol>
+</div></section>
+
+<section id="staerken"><div class="wrap">
+  <h2>Darauf können Sie sich verlassen</h2>
+  <div class="strengths">
+    <div><h3>Lernbereit</h3><p>Neue Programme schaue ich mir an und finde mich Schritt für Schritt hinein.</p></div>
+    <div><h3>Zuverlässig</h3><p>Wenn ich eine Aufgabe bekomme, erledige ich sie.</p></div>
+    <div><h3>Selbstständig</h3><p>Ich brauche nicht bei jedem Schritt Hilfe und frage, wenn ich wirklich nicht weiterkomme.</p></div>
+    <div><h3>Hilfsbereit</h3><p>Wenn jemand Unterstützung braucht, packe ich gern mit an.</p></div>
+  </div>
+</div></section>
+
+<section id="sap"><div class="wrap">
+  <h2>Warum ich zu SAP will</h2>
+  <p>SAP ist ein international tätiges Softwareunternehmen mit Sitz in Walldorf. Genau so einen Ort suche ich, um zu sehen, wie in der IT gearbeitet wird. Das möchte ich bei einem Praktikum herausfinden:</p>
+  <details><summary>Wie arbeitet ein großes Unternehmen an digitalen Lösungen?</summary><p>Ich kenne Unternehmen aus meinen Praktika. Wie Software-Teams arbeiten, habe ich noch nicht gesehen.</p></details>
+  <details><summary>Welche Berufe gibt es in der IT?</summary><p>Ich möchte verschiedene Bereiche kennenlernen und herausfinden, was zu mir passt.</p></details>
+  <details><summary>Wo steckt künstliche Intelligenz in der Praxis?</summary><p>KI-Anwendungen probiere ich schon selbst aus. Ich bin gespannt, wie ein Softwareunternehmen mit dem Thema umgeht.</p></details>
+</div></section>
+
+<section id="kontakt"><div class="wrap">
+  <h2>Lernen wir uns kennen?</h2>
+  <div class="contact">
+    <p>Über eine Einladung zu einem Kennenlernen oder ein Gespräch würde ich mich sehr freuen. Vielen Dank, dass Sie sich meine Seite angesehen haben.</p>
+    <dl>
+      <dt>Name</dt><dd>Daniel</dd>
+      <dt>Schule</dt><dd>Karl Drais Gemeinschaftsschule</dd>
+      <dt>E-Mail</dt><dd>andrey.buzulukin@gmail.com</dd>
+      <dt>Telefon</dt><dd>015901181624</dd>
+    </dl>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">Bewerbung um ein Schülerpraktikum bei SAP, Ostern 2027. Dies ist eine private Bewerbungsseite von Daniel.</div></footer>
+
+<script>
+(function(){
+  var r=document.documentElement,b=document.getElementById('theme');
+  b.addEventListener('click',function(){
+    var dark=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    r.setAttribute('data-theme',dark?'light':'dark');
+  });
+})();
+</script>
+
+
+</body></html>
